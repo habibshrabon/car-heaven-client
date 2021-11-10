@@ -1,8 +1,8 @@
 .hero {
-  padding-left: 180px;
+  /* padding-left: 180px; */
 }
 .hero-style {
-  background-image: url(../../../images/car-hero.jpg);
+  /* background-image: url(../../../images/car-hero.jpg); */
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,4 +22,26 @@
 }
 .hero {
   z-index: 1;
+}
+.btn-style {
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+  /* padding: 13px 35px 15px; */
+  font-weight: 600;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #052046;
+
+  text-transform: capitalize;
+}
+
+.btn-style:hover {
+  background-color: #ff6754;
+  color: white;
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }

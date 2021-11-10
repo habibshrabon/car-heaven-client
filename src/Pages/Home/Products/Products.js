@@ -17,7 +17,7 @@ const Products = () => {
         <hr />
         <div className="row">
           {products.map((product) => (
-            <Product product={product}></Product>
+            <Product key={product.id} product={product}></Product>
           ))}
         </div>
       </div>

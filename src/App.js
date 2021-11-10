@@ -1,7 +1,8 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home/Home";
-import Footer from "./Pages/Home/Footer/Footer";
+import Sidebar from "./Pages/Dashboard/Sidebar/Sidebar";
+import MyOrders from "./Pages/Dashboard/MyOrders/MyOrders";
 
 function App() {
   return (
@@ -11,11 +12,16 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/home">
+          <Route path="/home">
             <Home />
           </Route>
+          <Route path="/sidebar">
+            <Sidebar />
+          </Route>
+          <Route path="/myOrders">
+            <MyOrders />
+          </Route>
         </Switch>
-        <Footer />
       </Router>
     </div>
   );

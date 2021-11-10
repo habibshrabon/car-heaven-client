@@ -16,12 +16,12 @@ const Product = ({ product }) => {
           />
           <div className="card-body px-2">
             <h3 className="card-title text-center">{name}</h3>
-            <p class="card-text">Manufactured Year: {manufactured}</p>
-            <p class="card-text">{description}</p>
+            <p className="card-text">Manufactured Year: {manufactured}</p>
+            <p className="card-text">{description}</p>
             <div className="d-flex justify-content-between">
               <h4>Price: $ {price}</h4>
-              <button className="btn btn-primary px-3">
-                BOOK NOW <FontAwesomeIcon icon={faChevronRight} />
+              <button className="btn btn-style px-3">
+                BOOK NOW <FontAwesomeIcon className="" icon={faChevronRight} />
               </button>
             </div>
           </div>

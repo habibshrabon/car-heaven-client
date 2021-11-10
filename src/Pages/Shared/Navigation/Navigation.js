@@ -54,7 +54,7 @@ const Navigation = () => {
           className="web-name header-logo text-white"
           to="/"
         >
-          CAR HEAVEN
+          <span className="text-danger fw-bold">CAR HEAVEN</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -62,21 +62,18 @@ const Navigation = () => {
             <Nav.Link className=" text-white" as={Link} to="/home">
               Home
             </Nav.Link>
-            <Nav.Link className=" text-white" as={Link} to="#">
-              About us
+            <Nav.Link className=" text-white" as={Link} to="/myOrder">
+              My Orders
             </Nav.Link>
             <Nav.Link className=" text-white" as={Link} to="#">
               Products
             </Nav.Link>
-            <Nav.Link className=" text-white" as={Link} to="#">
-              Contact
-            </Nav.Link>
             <Nav.Link className=" text-white" as={Link} to="/sidebar">
-              Admin
+              Dashboard
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/signIn"
+              to="/login"
               className="active ms-md-5 p-1 px-4 btn btn-primary text-white border-box"
             >
               Login
