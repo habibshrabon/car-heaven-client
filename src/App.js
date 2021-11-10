@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./Pages/Home/Home/Home";
+import Footer from "./Pages/Home/Footer/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </div>
   );
