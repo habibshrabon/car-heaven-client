@@ -1,24 +1,20 @@
 import React from "react";
-import { Carousel } from "react-bootstrap";
-import car8 from "../../../images/car-8.jpg";
+import { Container, Row } from "react-bootstrap";
+import "./Banner.css";
 
 const Banner = () => {
   return (
-    <>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            style={{ height: "auto" }}
-            className="d-block w-100"
-            src={car8}
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h2>WE ARE HAPPY</h2>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-    </>
+    <section className=" text-white hero-style d-flex align-items-center">
+      <Container className="hero">
+        <Row>
+          <div className="col-md-5">
+            <h2 className="mb-4">Lorem ipsum dolor sit amet.</h2>
+            <h5 className="mb-4">hello my car world </h5>
+            <button className="btn-brand">More Products</button>
+          </div>
+        </Row>
+      </Container>
+    </section>
   );
 };
 

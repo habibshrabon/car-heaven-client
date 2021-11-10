@@ -1,3 +1,5 @@
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const Product = ({ product }) => {
@@ -18,7 +20,9 @@ const Product = ({ product }) => {
             <p class="card-text">{description}</p>
             <div className="d-flex justify-content-between">
               <h4>Price: $ {price}</h4>
-              <button className="btn btn-primary px-3">BOOK NOW</button>
+              <button className="btn btn-primary px-3">
+                BOOK NOW <FontAwesomeIcon icon={faChevronRight} />
+              </button>
             </div>
           </div>
         </div>
