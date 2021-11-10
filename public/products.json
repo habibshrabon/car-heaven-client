@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name": "TESLA",
+        "manufactured":"2020",
+        "price": "600000",
+        "description": "Tesla is the best.",
+        "img": "https://i.ibb.co/r2Qk26q/car-12.jpg"
+    },
+    {
+        "id": 2,
+        "name": "AUDI GLT",
+        "manufactured":"2021",
+        "price": "100000",
+        "description": "Audi is the best.",
+        "img": "https://i.ibb.co/tbjnTJY/car-2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "AUDI LATEST",
+        "manufactured":"2021",
+        "price": "220000",
+        "description": "Audi is the best.",
+        "img": "https://i.ibb.co/yn6Pppq/car-3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "BMW",
+        "manufactured":"2021",
+        "price": "500000",
+        "description": "BMW is the best.",
+        "img": "https://i.ibb.co/1LG2HTT/bmw-2.jpg"
+    },
+    {
+        "id": 5,
+        "name": "TOYOTA HARRIER",
+        "manufactured":"2016",
+        "price": "300000",
+        "description": "Toyota is the best.",
+        "img": "https://i.ibb.co/nzXjXNg/harriar.jpg"
+    },
+    {
+        "id": 6,
+        "name": "TOYOTA JEEP",
+        "manufactured":"2020",
+        "price": "20000",
+        "description": "Toyota is the best.",
+        "img": "https://i.ibb.co/jRk41Hn/car-1.jpg"
+    }
+    
+]
