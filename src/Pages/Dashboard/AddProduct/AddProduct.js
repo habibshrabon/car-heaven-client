@@ -25,7 +25,7 @@ const AddProduct = () => {
         className="py-5 col-md-10 "
         style={{ position: "absolute", right: "0", background: "#F4FDFB" }}
       >
-        <h3 className="text-brand p-4 text-center">Add Service</h3>
+        <h3 className="text-brand p-4 text-center">Add A Product</h3>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="mx-auto"

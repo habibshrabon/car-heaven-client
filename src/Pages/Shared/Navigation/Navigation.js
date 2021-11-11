@@ -69,7 +69,7 @@ const Navigation = () => {
             <Nav.Link className=" text-white" as={Link} to="/aboutUs">
               About Us
             </Nav.Link>
-            <Nav.Link className=" text-white" as={Link} to="/products">
+            <Nav.Link className=" text-white" as={Link} to="/allProducts">
               Products
             </Nav.Link>
             <Nav.Link className=" text-white" as={Link} to="/dashboard">

@@ -2,6 +2,9 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "./Banner.css";
 import car_banner from "../../../images/img_01.png";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 const Banner = () => {
   return (
@@ -17,9 +20,12 @@ const Banner = () => {
               DISCOVER THE INSTANT ACCELERATION, INCREDIBLE RANGE AND NIMBLE
               HANDLING OF THE ALL-ELECTRIC NISSAN LEAF
             </p>
-            <button className="btn-style btn px-3 ms-auto">
-              More Products
-            </button>
+            <Link to={`/allProducts`}>
+              <button className="btn-style btn px-3 ms-auto">
+                More Products{" "}
+                <FontAwesomeIcon className="" icon={faChevronRight} />
+              </button>
+            </Link>
           </Col>
           <Col md={6}>
             <img
