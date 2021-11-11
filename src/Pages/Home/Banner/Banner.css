@@ -2,7 +2,7 @@
   /* padding-left: 180px; */
 }
 .hero-style {
-  /* background-image: url(../../../images/car-hero.jpg); */
+  background-image: url(../../../images/bg.jpg);
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,13 +31,12 @@
   font-weight: 600;
   overflow: hidden;
   border-radius: 4px;
-  background-color: #052046;
-
+  background-color: #ff6754;
   text-transform: capitalize;
 }
 
 .btn-style:hover {
-  background-color: #ff6754;
+  background-color: #052046;
   color: white;
   transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;

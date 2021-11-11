@@ -1,8 +1,12 @@
+import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const Navigation = () => {
+  const { user, logOut } = useAuth();
   return (
     // <Navbar className="" collapseOnSelect sticky="top" expand="lg ">
     //   <Container>
@@ -62,21 +66,27 @@ const Navigation = () => {
             <Nav.Link className=" text-white" as={Link} to="/home">
               Home
             </Nav.Link>
-            <Nav.Link className=" text-white" as={Link} to="/myOrder">
-              My Orders
+            <Nav.Link className=" text-white" as={Link} to="/aboutUs">
+              About Us
             </Nav.Link>
-            <Nav.Link className=" text-white" as={Link} to="#">
+            <Nav.Link className=" text-white" as={Link} to="/products">
               Products
             </Nav.Link>
-            <Nav.Link className=" text-white" as={Link} to="/sidebar">
+            <Nav.Link className=" text-white" as={Link} to="/dashboard">
               Dashboard
             </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="/login"
-              className="active ms-md-5 p-1 px-4 btn btn-primary text-white border-box"
-            >
-              Login
+            {user?.email ? (
+              <Nav.Link className="text-white" onClick={logOut}>
+                <FontAwesomeIcon icon={faSignOutAlt} />
+                Logout
+              </Nav.Link>
+            ) : (
+              <Nav.Link className="text-white" as={Link} to="/login">
+                Login
+              </Nav.Link>
+            )}
+            <Nav.Link className=" px-3 text-white">
+              {user?.displayName}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -21,7 +21,7 @@ const Product = ({ product }) => {
             <div className="d-flex justify-content-between">
               <h4>Price: $ {price}</h4>
               <button className="btn btn-style px-3">
-                BOOK NOW <FontAwesomeIcon className="" icon={faChevronRight} />
+                BUY NOW <FontAwesomeIcon className="" icon={faChevronRight} />
               </button>
             </div>
           </div>

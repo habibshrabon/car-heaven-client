@@ -1,11 +1,11 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-import Sidebar from "../Sidebar/Sidebar";
+import Dashboard from "../Dashboard/Dashboard";
 
 const MyOrders = () => {
   return (
     <section className="container-fluid row">
-      <Sidebar></Sidebar>
+      <Dashboard />
       <div
         className="pt-4 col-md-10"
         style={{ position: "absolute", right: "0", background: "#F4FDFB" }}

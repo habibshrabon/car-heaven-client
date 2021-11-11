@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import logo from "../../../images/logo.png";
-import "./Sidebar.css";
+import "./Dashboard.css";
 
 // import { UserContext } from "../../../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,29 +13,7 @@ import {
   faList,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Sidebar = () => {
-  //   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  //   const [isAdmin, setIsAdmin] = useState([]);
-
-  //   useEffect(() => {
-  //     fetch("https://mighty-eyrie-38405.herokuapp.com/isAdmin")
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         const found = data.find(
-  //           (element) => element.email === loggedInUser.email
-  //         );
-  //         // console.log(found);
-  //         setIsAdmin(found);
-  //       });
-  //   }, []);
-
-  //   // console.log("isAdmin", isAdmin);
-  //   const isVerifyAdmin =
-  //     loggedInUser.isLoggedIn == true &&
-  //     isAdmin !== undefined &&
-  //     isAdmin.email == loggedInUser.email;
-  //   // console.log(isVerifyAdmin);
-
+const Dashboard = () => {
   return (
     <div
       className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4"
@@ -101,4 +79,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Dashboard;
