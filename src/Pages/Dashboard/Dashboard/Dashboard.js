@@ -31,10 +31,11 @@ const Dashboard = () => {
             </Link>
           </li>
           <li>
-            <Link to="/addService" className="text-white">
+            <Link to="/addProduct" className="text-white">
               <FontAwesomeIcon icon={faPlus} /> <span>Add A Product</span>
             </Link>
           </li>
+
           <li>
             <Link to="/makeAdmin" className="text-white">
               <FontAwesomeIcon icon={faUserPlus} /> <span>Make Admin</span>

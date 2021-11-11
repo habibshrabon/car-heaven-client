@@ -1,9 +1,10 @@
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
-  const { img, name, manufactured, price, description } = product;
+  const { _id, img, name, manufactured, price, description } = product;
   return (
     <>
       <div className="col-md-4 mb-3 ">
@@ -20,9 +21,12 @@ const Product = ({ product }) => {
             <p className="card-text">{description}</p>
             <div className="d-flex justify-content-between">
               <h4>Price: $ {price}</h4>
-              <button className="btn btn-style px-3">
-                BUY NOW <FontAwesomeIcon className="" icon={faChevronRight} />
-              </button>
+
+              <Link to={`/orderPlace/${_id}`}>
+                <button className="btn btn-style px-3">
+                  BUY NOW <FontAwesomeIcon className="" icon={faChevronRight} />
+                </button>
+              </Link>
             </div>
           </div>
         </div>

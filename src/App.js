@@ -6,6 +6,8 @@ import Login from "./Pages/Login/Login/Login";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
+import AddProduct from "./Pages/Dashboard/AddProduct/AddProduct";
+import OrderPlace from "./Pages/OrderPlace/OrderPlace";
 
 function App() {
   return (
@@ -25,6 +27,12 @@ function App() {
             <Route path="/aboutUs">{/* <AboutUs/> */}</Route>
             <Route path="/myOrders">
               <MyOrders />
+            </Route>
+            <Route path="/addProduct">
+              <AddProduct />
+            </Route>
+            <Route path="/orderPlace/:id">
+              <OrderPlace />
             </Route>
             <Route path="/login">
               <Login />

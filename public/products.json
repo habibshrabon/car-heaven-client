@@ -46,6 +46,38 @@
         "price": "20000",
         "description": "Toyota is the best.",
         "img": "https://i.ibb.co/jRk41Hn/car-1.jpg"
+    },
+    {
+        "id": 7,
+        "name": "TOYOTA JEEP",
+        "manufactured":"2020",
+        "price": "20000",
+        "description": "Toyota is the best.",
+        "img": "https://i.ibb.co/jRk41Hn/car-1.jpg"
+    },
+    {
+        "id": 8,
+        "name": "TOYOTA JEEP",
+        "manufactured":"2020",
+        "price": "20000",
+        "description": "Toyota is the best.",
+        "img": "https://i.ibb.co/jRk41Hn/car-1.jpg"
+    },
+    {
+        "id": 9,
+        "name": "TOYOTA JEEP",
+        "manufactured":"2020",
+        "price": "20000",
+        "description": "Toyota is the best.",
+        "img": "https://i.ibb.co/jRk41Hn/car-1.jpg"
+    },
+    {
+        "id": 10,
+        "name": "TOYOTA JEEP",
+        "manufactured":"2020",
+        "price": "20000",
+        "description": "Toyota is the best.",
+        "img": "https://i.ibb.co/jRk41Hn/car-1.jpg"
     }
     
 ]
