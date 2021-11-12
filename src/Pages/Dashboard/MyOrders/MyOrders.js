@@ -1,7 +1,6 @@
 /* eslint-disable no-restricted-globals */
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import Dashboard from "../Dashboard/Dashboard";
 
@@ -44,7 +43,7 @@ const MyOrders = () => {
             <tr>
               <th>Name</th>
               <th>Price</th>
-              <th>Cancel</th>
+              <th>Action</th>
             </tr>
           </thead>
 

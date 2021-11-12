@@ -44,21 +44,21 @@ const OrderPlace = () => {
     <div>
       <Navigation />
       <div className="mt-5">
+        <h2 className="mt-5 pt-5 text-center fw-bold">Order Placed Here</h2>
         <Container
           style={{ height: "100%" }}
           className="d-flex justify-content-center align-content-center"
         >
           <Row>
-            <Col
-              md={6}
-              className="rounded container p-3 mb-5 bg-body rounded shadow px-5"
-            >
+            <Col md={6} className="container my-5 bg-body rounded shadow">
               <img
-                className="pb-5 rounded img-fluid"
+                style={{ height: "396px" }}
+                className="rounded img-fluid"
                 src={details.img}
                 alt=""
               />
-              <h3>{details.name}</h3>
+              <h3>Product Name: {details.name}</h3>
+              <h4>Price: ${details.price}</h4>
             </Col>
             <Col md={6}>
               <section className="container-fluid row shadow mx-5 mt-5">
@@ -104,7 +104,7 @@ const OrderPlace = () => {
                   </button>
                 </form> */}
                 <div className="add-package mt-5 form-bg">
-                  <h2 className="text-center">Order Place Form</h2>
+                  <h2 className="text-center">Submit Form</h2>
                   <form
                     onSubmit={handleSubmit(onSubmit)}
                     className="text-center box-shadow mb-5 mt-5"

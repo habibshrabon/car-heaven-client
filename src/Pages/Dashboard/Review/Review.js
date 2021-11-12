@@ -1,15 +1,17 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import useAuth from "../../../hooks/useAuth";
 import Dashboard from "../Dashboard/Dashboard";
 
 const Review = () => {
   const { register, handleSubmit, reset } = useForm();
+  const { user } = useAuth();
 
   const onSubmit = (data) => {
     console.log(data);
 
-    axios.post("http://localhost:5000/products", data).then((res) => {
+    axios.post("http://localhost:5000/review", data).then((res) => {
       if (res.data.insertedId) {
         alert("added successfully");
         reset();
@@ -21,42 +23,41 @@ const Review = () => {
     <section className="container-fluid row">
       <Dashboard />
       <div
-        className="pt-4 col-md-10"
+        className="py-5 col-md-10 "
         style={{ position: "absolute", right: "0", background: "#F4FDFB" }}
       >
-        <h3 className="text-brand p-4">Review</h3>
+        <h3 className="text-brand p-4 text-center">Add A Product</h3>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          style={{ background: "#fff" }}
-          className="m-4 p-3 col-md-6"
+          className="mx-auto"
+          style={{ maxWidth: "600px" }}
         >
           <input
-            type="text"
             className="form-control"
-            name="name"
-            placeholder="Your Name"
+            {...register("name", { maxLength: 20 })}
+            defaultValue={user.displayName}
           />
           <br />
           <input
-            type="text"
             className="form-control"
-            name="title"
-            placeholder="Product Feedback"
+            {...register("productName", { required: true, maxLength: 20 })}
+            placeholder="Product Name"
           />
           <br />
           <textarea
-            name="textarea"
             className="form-control"
-            cols="30"
-            rows="5"
+            {...register("description")}
             placeholder="Description"
           />
           <br />
-          {/* <input type="file" className="form-control" placeholder="Picture" /> */}
+
+          <input
+            className="form-control"
+            {...register("img")}
+            placeholder="image url"
+          />
           <br />
-          <button type="submit" className="btn-brand">
-            Submit
-          </button>
+          <input className="form-control btn-style" type="submit" />
         </form>
       </div>
     </section>

@@ -42,22 +42,22 @@ const Dashboard = () => {
             </Link>
           </li>
           <li>
-            <Link to="/manageAllOrders" className="text-white">
+            <Link to="/manageAllProducts" className="text-white">
               <FontAwesomeIcon icon={faGripHorizontal} />{" "}
-              <span>Manage All Orders</span>
+              <span>Manage All Products</span>
             </Link>
           </li>
         </>
 
         <>
           <li>
-            <Link to="/booking/:_id" className="text-white">
-              <FontAwesomeIcon icon={faGripHorizontal} /> <span>Book</span>
+            <Link to="/pay/:_id" className="text-white">
+              <FontAwesomeIcon icon={faGripHorizontal} /> <span>Pay</span>
             </Link>
           </li>
           <li>
-            <Link to="/bookingList" className="text-white">
-              <FontAwesomeIcon icon={faList} /> <span>Booking List</span>
+            <Link to="/manageProduct" className="text-white">
+              <FontAwesomeIcon icon={faList} /> <span>Manage Products</span>
             </Link>
           </li>
           <li>

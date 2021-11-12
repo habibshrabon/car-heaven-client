@@ -11,8 +11,8 @@ const Products = () => {
   }, []);
   return (
     <div className="container">
-      <div className="text-center py-5">
-        <h2 className="mt-5 fw-bold">Our services</h2>
+      <div className="text-center">
+        <h2 className="fw-bold">Our services</h2>
         <p>Explore World,Lowest Rates, Guaranteed Services.</p>
         <hr />
         <div className="row">

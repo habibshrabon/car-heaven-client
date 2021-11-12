@@ -1,12 +1,11 @@
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
-import { Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import Dashboard from "../Dashboard/Dashboard";
 
-const ManageAllOrder = () => {
+const ManageAllProducts = () => {
   const { user } = useAuth();
   const [orders, setOrders] = useState([]);
   console.log(orders);
@@ -17,6 +16,7 @@ const ManageAllOrder = () => {
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [user]);
+
   return (
     <section className="container-fluid row">
       <Dashboard />
@@ -60,4 +60,4 @@ const ManageAllOrder = () => {
   );
 };
 
-export default ManageAllOrder;
+export default ManageAllProducts;

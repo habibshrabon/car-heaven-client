@@ -16,7 +16,7 @@ const AllProducts = () => {
       <Navigation />
       <div className="container">
         <div className="text-center py-5">
-          <h2 className="mt-3 fw-bold">Our services</h2>
+          <h2 className="mt-5 fw-bold">Our services</h2>
           <p>Explore World,Lowest Rates, Guaranteed Services.</p>
           <hr />
           <div className="row">

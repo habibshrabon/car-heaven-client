@@ -10,8 +10,12 @@ import AddProduct from "./Pages/Dashboard/AddProduct/AddProduct";
 import OrderPlace from "./Pages/OrderPlace/OrderPlace";
 import AllProducts from "./Pages/Home/AllProducts/AllProducts";
 import NotFound from "./Pages/NotFound/NotFound";
-import ManageAllOrder from "./Pages/Dashboard/ManageAllOrder/ManageAllOrder";
 import Review from "./Pages/Dashboard/Review/Review";
+import ManageAllProducts from "./Pages/Dashboard/ManageAllProducts/ManageAllProducts";
+import Pay from "./Pages/Dashboard/Pay/Pay";
+import ManageProduct from "./Pages/Dashboard/ManageProduct/ManageProduct";
+import MakeAdmin from "./Pages/Dashboard/MakeAdmin/MakeAdmin";
+import UserReview from "./Pages/Home/UserReview/UserReview";
 
 function App() {
   return (
@@ -41,11 +45,23 @@ function App() {
             <Route path="/allProducts">
               <AllProducts />
             </Route>
-            <Route path="/manageAllOrders">
-              <ManageAllOrder />
+            <Route path="/manageAllProducts">
+              <ManageAllProducts />
+            </Route>
+            <Route path="/manageProduct">
+              <ManageProduct />
+            </Route>
+            <Route path="/pay/:_id">
+              <Pay />
             </Route>
             <Route path="/review">
               <Review />
+            </Route>
+            <Route path="/userReview">
+              <UserReview />
+            </Route>
+            <Route path="/makeAdmin">
+              <MakeAdmin />
             </Route>
             <Route path="/login">
               <Login />
