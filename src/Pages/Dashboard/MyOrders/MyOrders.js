@@ -1,32 +1,71 @@
-import React from "react";
+/* eslint-disable no-restricted-globals */
+import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 import Dashboard from "../Dashboard/Dashboard";
 
 const MyOrders = () => {
+  const { user } = useAuth();
+  const [allOrders, setAllOrders] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/orders")
+      .then((res) => res.json())
+      .then((data) => setAllOrders(data));
+  }, []);
+
+  const userOrders = allOrders.filter((orders) => orders.email === user.email);
+
+  const handleDelete = (id) => {
+    if (confirm("You are deleting an ordered package!!")) {
+      const url = `http://localhost:5000/orders/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount) {
+            const remaining = allOrders.filter((event) => event._id !== id);
+            setAllOrders(remaining);
+          }
+        });
+    }
+  };
   return (
     <section className="container-fluid row">
       <Dashboard />
       <div
-        className="pt-4 col-md-10"
+        className="py-5 col-md-10 "
         style={{ position: "absolute", right: "0", background: "#F4FDFB" }}
       >
-        <h3 className="text-brand p-4">Order List</h3>
         <Table striped bordered hover className="p-3 shadow">
           <thead>
             <tr>
               <th>Name</th>
-              <th>Email</th>
-              <th>Services</th>
-              <th>Pay with</th>
-              <th>status</th>
+              <th>Price</th>
+              <th>Cancel</th>
             </tr>
           </thead>
 
-          {/* {orders.length === 0
+          {userOrders.length === 0
             ? "No Order found"
-            : orders.map((order) => (
-                <Order order={order} key={orders._id}></Order>
-              ))} */}
+            : userOrders.map((order) => (
+                <tbody key={order._id}>
+                  <tr>
+                    <td>{order.order.name}</td>
+                    <td>{order.order.price}</td>
+                    <td>
+                      <button
+                        onClick={() => handleDelete(order._id)}
+                        className="btn btn-danger"
+                      >
+                        delete
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              ))}
         </Table>
       </div>
     </section>

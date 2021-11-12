@@ -48,7 +48,7 @@ const Navigation = () => {
     // </Navbar>
     <Navbar
       style={{ position: "absolute", left: 0, top: 0, right: 0, zIndex: 3 }}
-      bg="transparent"
+      bg="black"
       expand="lg"
     >
       <Container>

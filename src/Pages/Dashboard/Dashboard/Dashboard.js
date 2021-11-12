@@ -42,9 +42,9 @@ const Dashboard = () => {
             </Link>
           </li>
           <li>
-            <Link to="/manageService" className="text-white">
+            <Link to="/manageAllOrders" className="text-white">
               <FontAwesomeIcon icon={faGripHorizontal} />{" "}
-              <span>Manage Services</span>
+              <span>Manage All Orders</span>
             </Link>
           </li>
         </>

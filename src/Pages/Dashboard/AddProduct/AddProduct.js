@@ -45,6 +45,12 @@ const AddProduct = () => {
           <br />
           <input
             className="form-control"
+            {...register("manufactured", { required: true, maxLength: 20 })}
+            placeholder="Manufactured"
+          />
+          <br />
+          <input
+            className="form-control"
             type="number"
             {...register("price")}
             placeholder="price"
@@ -56,7 +62,7 @@ const AddProduct = () => {
             placeholder="image url"
           />
           <br />
-          <input className="form-control bg-primary" type="submit" />
+          <input className="form-control btn-style" type="submit" />
         </form>
       </div>
     </section>

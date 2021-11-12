@@ -9,6 +9,9 @@ import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import AddProduct from "./Pages/Dashboard/AddProduct/AddProduct";
 import OrderPlace from "./Pages/OrderPlace/OrderPlace";
 import AllProducts from "./Pages/Home/AllProducts/AllProducts";
+import NotFound from "./Pages/NotFound/NotFound";
+import ManageAllOrder from "./Pages/Dashboard/ManageAllOrder/ManageAllOrder";
+import Review from "./Pages/Dashboard/Review/Review";
 
 function App() {
   return (
@@ -38,8 +41,17 @@ function App() {
             <Route path="/allProducts">
               <AllProducts />
             </Route>
+            <Route path="/manageAllOrders">
+              <ManageAllOrder />
+            </Route>
+            <Route path="/review">
+              <Review />
+            </Route>
             <Route path="/login">
               <Login />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </Router>
