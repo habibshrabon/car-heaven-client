@@ -41,7 +41,7 @@ const ManageAllProducts = () => {
         className="py-5 col-md-10 "
         style={{ position: "absolute", right: "0", background: "#F4FDFB" }}
       >
-        <div className="container mx-5">
+        <div className="container mx-0 mx-lg-5">
           <div className="row">
             <div className="col">
               <h2 className="mb-5">Manage All Orders </h2>

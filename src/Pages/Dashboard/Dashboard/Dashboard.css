@@ -17,3 +17,10 @@
 .li-style li {
   margin-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+  .dashboard {
+    position: inherit;
+    height: auto !important;
+  }
+}

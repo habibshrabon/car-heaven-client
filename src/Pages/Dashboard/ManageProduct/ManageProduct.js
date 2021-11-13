@@ -24,7 +24,7 @@ const ManageProduct = ({ pd }) => {
 
   return (
     <>
-      <div className="container mx-5">
+      <div className="container mx-0 mx-lg-5">
         <div className="col-md-4 mb-3 ">
           <div className="card h-100 card-bg shadow img-style">
             <img

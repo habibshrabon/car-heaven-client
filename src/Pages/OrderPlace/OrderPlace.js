@@ -61,7 +61,7 @@ const OrderPlace = () => {
               <h4>Price: ${details.price}</h4>
             </Col>
             <Col md={6}>
-              <section className="container-fluid row shadow mx-5 mt-5">
+              <section className="container-fluid row shadow mx-0 mx-lg-5 mt-5">
                 <div className="add-package mt-5 form-bg">
                   <h2 className="text-center">Submit Form</h2>
                   <form

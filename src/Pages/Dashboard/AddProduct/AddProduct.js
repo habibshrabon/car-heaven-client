@@ -22,10 +22,7 @@ const AddProduct = () => {
   return (
     <section className="container-fluid row">
       <Dashboard></Dashboard>
-      <div
-        className="py-5 col-md-10 "
-        style={{ position: "absolute", right: "0", background: "#F4FDFB" }}
-      >
+      <div className="py-5 col-md-10 make__admin">
         <h3 className="text-brand p-4 text-center">Add A Product</h3>
         <form
           onSubmit={handleSubmit(onSubmit)}

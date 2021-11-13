@@ -17,13 +17,12 @@ const Dashboard = () => {
   const [admin, setAdmin] = useState(false);
 
   useEffect(() => {
-    fetch(`https://quiet-mountain-69399.herokuapp.com/users/${user.email}`)
+    fetch(`https://quiet-mountain-69399.herokuapp.com/users/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log("data", data);
         setAdmin(data.admin);
       });
-  }, [user.email]);
+  }, [user]);
   return (
     <div
       className="dashboard d-flex flex-column justify-content-between col-md-2 py-5 px-4"

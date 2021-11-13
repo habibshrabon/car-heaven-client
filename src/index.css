@@ -16,3 +16,16 @@ code {
 .rounded img {
   object-fit: cover;
 }
+.make__admin {
+  position: "absolute";
+  height: "100vh";
+  right: "0";
+  background: "#F4FDFB";
+}
+
+@media (max-width: 768px) {
+  .make__admin {
+    position: inherit;
+    height: auto;
+  }
+}

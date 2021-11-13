@@ -31,16 +31,8 @@ const MakeAdmin = () => {
   return (
     <div className="container-fluid row">
       <Dashboard></Dashboard>
-      <div
-        className="py-5 col-md-10"
-        style={{
-          position: "absolute",
-          height: "100vh",
-          right: "0",
-          background: "#F4FDFB",
-        }}
-      >
-        <div className="container mx-5">
+      <div className="make__admin py-5 col-md-10">
+        <div className="container mx-0 mx-lg-5">
           <h1>Admin</h1>
           <form onSubmit={handelAdminSubmit}>
             <input
