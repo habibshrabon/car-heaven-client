@@ -81,7 +81,7 @@ const Dashboard = () => {
         )}
       </ul>
       <div>
-        <Nav.Link className="text-white" onClick={logOut}>
+        <Nav.Link to="/login" className="text-white" onClick={logOut}>
           <FontAwesomeIcon icon={faSignOutAlt} />
           Logout
         </Nav.Link>
