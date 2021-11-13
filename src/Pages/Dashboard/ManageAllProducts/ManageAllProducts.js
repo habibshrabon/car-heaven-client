@@ -74,7 +74,7 @@ const ManageAllProducts = () => {
                             onClick={() => handleDelete(order._id)}
                             className="btn btn-danger"
                           >
-                            delete
+                            Delete
                           </button>
                         </div>
                       </div>

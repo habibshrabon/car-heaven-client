@@ -82,16 +82,10 @@ const Dashboard = () => {
         )}
       </ul>
       <div>
-        {user?.email ? (
-          <Nav.Link className="text-white" to="/home" onClick={logOut}>
-            <FontAwesomeIcon icon={faSignOutAlt} />
-            Logout
-          </Nav.Link>
-        ) : (
-          <Nav.Link className="text-white" as={Link} to="/login">
-            Login
-          </Nav.Link>
-        )}
+        <Nav.Link className="text-white" onClick={logOut}>
+          <FontAwesomeIcon icon={faSignOutAlt} />
+          Logout
+        </Nav.Link>
       </div>
     </div>
   );
