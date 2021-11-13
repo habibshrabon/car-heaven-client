@@ -19,7 +19,7 @@ const OrderPlace = () => {
         console.log(data);
         setDetails(data);
       });
-  }, []);
+  }, [id]);
 
   const onSubmit = (userInfo) => {
     const eventDetails = details;

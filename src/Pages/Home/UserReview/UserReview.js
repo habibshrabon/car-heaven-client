@@ -12,9 +12,9 @@ const UserReview = () => {
       });
   }, []);
   return (
-    <section style={{ background: "#F7F7F6" }} className="py-5">
-      <Container>
-        <h3 className="text-center py-5">Product Review</h3>
+    <Container>
+      <section className="py-5">
+        <h3 className="text-center py-5 fw-bold">TESTIMONIALS</h3>
         <div className="row">
           {review.length === 0 ? (
             <div className="text-center w-100">
@@ -26,8 +26,8 @@ const UserReview = () => {
             ))
           )}
         </div>
-      </Container>
-    </section>
+      </section>
+    </Container>
   );
 };
 

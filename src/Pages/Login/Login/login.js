@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation, useHistory, Link } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import Footer from "../../Shared/Footer/Footer";
 import Navigation from "../../Shared/Navigation/Navigation";
@@ -65,7 +65,9 @@ const Login = () => {
         style={{ maxWidth: "600px" }}
       >
         <form onSubmit={handleSignUp}>
-          <h3 className="pb-5">Please {isLogin ? "Login" : "Register"}</h3>
+          <h3 className="pb-5 pt-5 fw-bold">
+            Please {isLogin ? "Login" : "Register"}
+          </h3>
           {!isLogin && (
             <div className="row mb-3">
               <label
@@ -86,7 +88,10 @@ const Login = () => {
             </div>
           )}
           <div className="row">
-            <label htmlFor="inputName" className="col-sm-2 col-form-label">
+            <label
+              htmlFor="inputName"
+              className="text-white col-sm-2 col-form-label"
+            >
               Email
             </label>
             <div className="col-sm-10">
@@ -100,7 +105,10 @@ const Login = () => {
             </div>
           </div>
           <div className="row mt-3 mb-3">
-            <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">
+            <label
+              htmlFor="inputPassword3"
+              className="col-sm-2 col-form-label text-white"
+            >
               Password
             </label>
             <div className="col-sm-10">
@@ -114,7 +122,10 @@ const Login = () => {
             </div>
           </div>
           <div className="row mt-3 mb-3">
-            <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">
+            <label
+              htmlFor="inputPassword3"
+              className="col-sm-2 col-form-label text-white"
+            >
               Confirm Password
             </label>
             <div className="col-sm-10">
@@ -136,7 +147,10 @@ const Login = () => {
                   type="checkbox"
                   id="gridCheck1"
                 />
-                <label className="form-check-label" htmlFor="gridCheck1">
+                <label
+                  className="form-check-label text-white"
+                  htmlFor="gridCheck1"
+                >
                   Already Have an Account?
                 </label>
               </div>

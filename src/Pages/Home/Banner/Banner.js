@@ -28,12 +28,7 @@ const Banner = () => {
             </Link>
           </Col>
           <Col md={6}>
-            <img
-              style={{ height: "400px", maxWidth: "700px" }}
-              className=""
-              src={car_banner}
-              alt=""
-            />
+            <img className="car__banner" src={car_banner} alt="" />
           </Col>
         </Row>
       </Container>

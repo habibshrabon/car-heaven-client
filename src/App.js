@@ -13,9 +13,10 @@ import NotFound from "./Pages/NotFound/NotFound";
 import Review from "./Pages/Dashboard/Review/Review";
 import ManageAllProducts from "./Pages/Dashboard/ManageAllProducts/ManageAllProducts";
 import Pay from "./Pages/Dashboard/Pay/Pay";
-import ManageProduct from "./Pages/Dashboard/ManageProduct/ManageProduct";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin/MakeAdmin";
 import UserReview from "./Pages/Home/UserReview/UserReview";
+import ManageProducts from "./Pages/Dashboard/ManageProducts/ManageProducts";
+import AboutUs from "./Pages/Home/AboutUs/AboutUs";
 
 function App() {
   return (
@@ -32,7 +33,9 @@ function App() {
             <PrivateRoute path="/dashboard">
               <Dashboard />
             </PrivateRoute>
-            <Route path="/aboutUs">{/* <AboutUs/> */}</Route>
+            <Route path="/aboutUs">
+              <AboutUs />
+            </Route>
             <Route path="/myOrders">
               <MyOrders />
             </Route>
@@ -48,8 +51,8 @@ function App() {
             <Route path="/manageAllProducts">
               <ManageAllProducts />
             </Route>
-            <Route path="/manageProduct">
-              <ManageProduct />
+            <Route path="/manageProducts">
+              <ManageProducts />
             </Route>
             <Route path="/pay/:_id">
               <Pay />

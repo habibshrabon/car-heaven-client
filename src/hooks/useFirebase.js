@@ -20,6 +20,9 @@ const useFirebase = () => {
 
   //handel user register
   const handleUserRegister = (email, password, name) => {
+    //save user to the database
+    saveUser(email, name);
+
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
@@ -52,6 +55,17 @@ const useFirebase = () => {
     signOut(auth)
       .then(() => {})
       .finally(() => setIsLoading(false));
+  };
+
+  const saveUser = (email, displayName) => {
+    const user = { email, displayName };
+    fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then();
   };
 
   return {

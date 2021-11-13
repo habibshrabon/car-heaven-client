@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { Container } from "react-bootstrap";
 import "./Footer.css";
@@ -16,7 +17,6 @@ const Footer = () => {
               You'll be selling directly to an automotive recycling company, not
               a third party.
             </p>
-            <button className="btn-primary">Booking</button>
           </div>
           <div className="col-md-6 col-lg-3">
             <h3>Pages</h3>

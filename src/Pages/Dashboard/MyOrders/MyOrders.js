@@ -34,16 +34,19 @@ const MyOrders = () => {
   return (
     <section className="container-fluid row">
       <Dashboard />
+
       <div
         className="py-5 col-md-10 "
         style={{ position: "absolute", right: "0", background: "#F4FDFB" }}
       >
+        <h2 className="text-center mb-5">My Orders List</h2>
         <Table striped bordered hover className="p-3 shadow">
           <thead>
             <tr>
               <th>Name</th>
               <th>Price</th>
               <th>Action</th>
+              <th>Status</th>
             </tr>
           </thead>
 
@@ -59,7 +62,7 @@ const MyOrders = () => {
                         onClick={() => handleDelete(order._id)}
                         className="btn btn-danger"
                       >
-                        delete
+                        Delete
                       </button>
                     </td>
                   </tr>

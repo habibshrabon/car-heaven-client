@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../../Shared/Footer/Footer";
 import Navigation from "../../Shared/Navigation/Navigation";
-import Product from "../Product/Product";
+import ManageProduct from "../ManageProduct/ManageProduct";
 
-const AllProducts = () => {
+const ManageProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:5000/products")
       .then((res) => res.json())
-      .then((data) => setProducts(data));
+      .then((data) => {
+        setProducts(data);
+      });
   }, []);
   return (
     <div>
@@ -21,7 +23,7 @@ const AllProducts = () => {
           <hr />
           <div className="row">
             {products.map((product) => (
-              <Product key={product.id} product={product}></Product>
+              <ManageProduct key={product.id} pd={product}></ManageProduct>
             ))}
           </div>
         </div>
@@ -31,4 +33,4 @@ const AllProducts = () => {
   );
 };
 
-export default AllProducts;
+export default ManageProducts;
