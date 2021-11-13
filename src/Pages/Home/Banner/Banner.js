@@ -23,7 +23,14 @@ const Banner = () => {
             <Link to={`/allProducts`}>
               <button className="btn-style btn px-3 ms-auto">
                 More Products{" "}
-                <FontAwesomeIcon className="" icon={faChevronRight} />
+                <FontAwesomeIcon
+                  className="text-danger"
+                  icon={faChevronRight}
+                />
+                <FontAwesomeIcon
+                  className="text-danger"
+                  icon={faChevronRight}
+                />
               </button>
             </Link>
           </Col>

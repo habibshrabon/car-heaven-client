@@ -1,6 +1,5 @@
 import React from "react";
 import image from "../../../images/about-pic.jpg";
-import Footer from "../../Shared/Footer/Footer";
 import Navigation from "../../Shared/Navigation/Navigation";
 
 const AboutUs = () => {

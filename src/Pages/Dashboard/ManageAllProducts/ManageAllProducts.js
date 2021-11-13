@@ -11,7 +11,7 @@ const ManageAllProducts = () => {
   console.log(allOrders);
 
   useEffect(() => {
-    const url = `http://localhost:5000/orders`;
+    const url = `https://quiet-mountain-69399.herokuapp.com/orders`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setOrders(data));
@@ -19,7 +19,7 @@ const ManageAllProducts = () => {
 
   const handleDelete = (id) => {
     if (confirm("You are deleting an ordered package!!")) {
-      const url = `http://localhost:5000/orders/${id}`;
+      const url = `https://quiet-mountain-69399.herokuapp.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })

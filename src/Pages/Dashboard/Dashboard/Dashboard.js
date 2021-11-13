@@ -17,7 +17,7 @@ const Dashboard = () => {
   const [admin, setAdmin] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user.email}`)
+    fetch(`https://quiet-mountain-69399.herokuapp.com/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         console.log("data", data);
@@ -68,7 +68,7 @@ const Dashboard = () => {
               </Link>
             </li>
             <li>
-              <Link to="/pay/:_id" className="text-white">
+              <Link to="/pay" className="text-white">
                 <FontAwesomeIcon icon={faGripHorizontal} /> <span>Pay</span>
               </Link>
             </li>
@@ -83,7 +83,7 @@ const Dashboard = () => {
       </ul>
       <div>
         {user?.email ? (
-          <Nav.Link className="text-white" onClick={logOut}>
+          <Nav.Link className="text-white" to="/home" onClick={logOut}>
             <FontAwesomeIcon icon={faSignOutAlt} />
             Logout
           </Nav.Link>

@@ -24,7 +24,15 @@ const Product = ({ product }) => {
 
               <Link to={`/orderPlace/${_id}`}>
                 <button className="btn btn-style px-3">
-                  BUY NOW <FontAwesomeIcon className="" icon={faChevronRight} />
+                  BUY NOW{" "}
+                  <FontAwesomeIcon
+                    className="text-danger"
+                    icon={faChevronRight}
+                  />
+                  <FontAwesomeIcon
+                    className="text-danger"
+                    icon={faChevronRight}
+                  />
                 </button>
               </Link>
             </div>

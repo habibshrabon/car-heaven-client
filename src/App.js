@@ -54,7 +54,7 @@ function App() {
             <Route path="/manageProducts">
               <ManageProducts />
             </Route>
-            <Route path="/pay/:_id">
+            <Route path="/pay">
               <Pay />
             </Route>
             <Route path="/review">

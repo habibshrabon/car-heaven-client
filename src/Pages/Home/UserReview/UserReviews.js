@@ -1,4 +1,5 @@
 import React from "react";
+import "./UserReviews.css";
 
 const UserReviews = ({ review }) => {
   const { name, productName, description, img } = review;
@@ -8,12 +9,8 @@ const UserReviews = ({ review }) => {
         style={{ border: "1px solid gray", background: "#F7F7F6" }}
         className="p-4 rounded mb-5"
       >
-        <div className="row">
-          <img
-            style={{ width: "100px", height: "100px", borderRadius: "50%" }}
-            src={img}
-            alt=""
-          />
+        <div className="row review-img">
+          <img src={img} alt="" />
           <div>
             <h3>{name}</h3>
             <p>{productName}</p>

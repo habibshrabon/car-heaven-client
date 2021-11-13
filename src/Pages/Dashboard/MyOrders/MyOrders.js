@@ -9,7 +9,7 @@ const MyOrders = () => {
   const [allOrders, setAllOrders] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://quiet-mountain-69399.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
   }, []);
@@ -18,7 +18,7 @@ const MyOrders = () => {
 
   const handleDelete = (id) => {
     if (confirm("You are deleting an ordered package!!")) {
-      const url = `http://localhost:5000/orders/${id}`;
+      const url = `https://quiet-mountain-69399.herokuapp.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -46,7 +46,6 @@ const MyOrders = () => {
               <th>Name</th>
               <th>Price</th>
               <th>Action</th>
-              <th>Status</th>
             </tr>
           </thead>
 
@@ -58,6 +57,7 @@ const MyOrders = () => {
                     <td>{order.order.name}</td>
                     <td>{order.order.price}</td>
                     <td>
+                      <button className="btn btn-info mx-2">Pending</button>
                       <button
                         onClick={() => handleDelete(order._id)}
                         className="btn btn-danger"

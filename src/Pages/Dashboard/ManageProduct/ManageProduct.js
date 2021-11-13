@@ -7,7 +7,7 @@ const ManageProduct = ({ pd }) => {
 
   const handleDelete = (id) => {
     if (confirm("You are deleting an ordered package!!")) {
-      const url = `http://localhost:5000/products/${id}`;
+      const url = `https://quiet-mountain-69399.herokuapp.com/products/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -24,26 +24,28 @@ const ManageProduct = ({ pd }) => {
 
   return (
     <>
-      <div className="col-md-4 mb-3 ">
-        <div className="card h-100 card-bg shadow img-style">
-          <img
-            src={img}
-            style={{ height: "275px" }}
-            className="card-img-top justify-content-center align-items-center img-fluid"
-            alt="img"
-          />
-          <div className="card-body px-2">
-            <h3 className="card-title text-center">{name}</h3>
-            <p className="card-text">Manufactured Year: {manufactured}</p>
-            <p className="card-text">{description}</p>
-            <div className="d-flex justify-content-between">
-              <h4>Price: $ {price}</h4>
-              <button
-                onClick={() => handleDelete(_id)}
-                className="btn btn-danger"
-              >
-                delete
-              </button>
+      <div className="container mx-5">
+        <div className="col-md-4 mb-3 ">
+          <div className="card h-100 card-bg shadow img-style">
+            <img
+              src={img}
+              style={{ height: "275px" }}
+              className="card-img-top justify-content-center align-items-center img-fluid"
+              alt="img"
+            />
+            <div className="card-body px-2">
+              <h3 className="card-title text-center">{name}</h3>
+              <p className="card-text">Manufactured Year: {manufactured}</p>
+              <p className="card-text">{description}</p>
+              <div className="d-flex justify-content-between">
+                <h4>Price: $ {price}</h4>
+                <button
+                  onClick={() => handleDelete(_id)}
+                  className="btn btn-danger"
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           </div>
         </div>
