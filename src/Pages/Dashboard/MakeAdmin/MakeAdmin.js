@@ -31,24 +31,27 @@ const MakeAdmin = () => {
   return (
     <div className="container-fluid row">
       <Dashboard></Dashboard>
-      <div className="make__admin py-5 col-md-10">
-        <div className="container mx-0 mx-lg-5">
-          <h1>Admin</h1>
-          <form onSubmit={handelAdminSubmit}>
-            <input
-              onBlur={handelOnBlur}
-              className="form-control"
-              type="email"
-              name="email"
-              id=""
-            />
-            <br />
-            <button type="submit" className=" btn btn-style px-3">
-              Make Admin
-            </button>
-          </form>
-          {success && alert("Make admin successfully")}
-        </div>
+
+      <div className="py-5 col-md-10 make__admin">
+        <h1>Admin</h1>
+        <form
+          onSubmit={handelAdminSubmit}
+          className="mx-auto"
+          style={{ maxWidth: "600px" }}
+        >
+          <input
+            onBlur={handelOnBlur}
+            className="form-control"
+            type="email"
+            name="email"
+            placeholder="Make Admin Email Here"
+          />
+          <br />
+          <button type="submit" className=" btn btn-style px-3">
+            Make Admin
+          </button>
+        </form>
+        {success && alert("Make admin successfully")}
       </div>
     </div>
   );

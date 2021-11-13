@@ -36,9 +36,11 @@ const Navigation = () => {
             <Nav.Link className=" text-white" as={Link} to="/allProducts">
               Products
             </Nav.Link>
-            <Nav.Link className=" text-white" as={Link} to="/dashboard">
-              Dashboard
-            </Nav.Link>
+            {user?.email && (
+              <Nav.Link className=" text-white" as={Link} to="/dashboard">
+                Dashboard
+              </Nav.Link>
+            )}
             {user?.email ? (
               <Nav.Link className="text-white" onClick={logOut}>
                 <FontAwesomeIcon className="text-danger" icon={faSignOutAlt} />
